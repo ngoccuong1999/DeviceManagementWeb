@@ -1,0 +1,108 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="">
+            <result>login.jsp</result>
+        </action>
+        <action name="LoginAction" class="cuongdn.actions.LoginAction">
+            <result name="user">user.jsp</result>
+            <result name="admin">admin.jsp</result>
+            <result name="staff">staff.jsp</result>
+            <result name="fail">login.jsp</result>
+        </action>
+        <action name="SignUpAction" class="cuongdn.actions.SignUpAction">
+            <result name="user">user.jsp</result>
+            <result name="login">login.jsp</result>
+        </action>
+        <action name="LoadAnnoucementAction" class="cuongdn.actions.LoadAnnoucementAction">
+            <result name="success">admin.jsp</result>
+        </action>
+        <action name="LoadFixAction" class="cuongdn.actions.LoadFixAction">
+            <result name="success">staff.jsp</result>
+        </action>
+        <action name="LoadDeviceUserAction" class="cuongdn.actions.LoadDeviceUserAction">
+            <result name="success">user.jsp</result>
+        </action>
+        <action name="PositionAction" class="cuongdn.actions.PositionAction">
+            <result name="success">detailPosition.jsp</result>
+        </action>
+        <action name="ImageAction" class="cuongdn.actions.ImageAction">
+            <result name="success">image.jsp</result>
+        </action>
+        <action name="FixAction" class="cuongdn.actions.FixAction">
+            <result name="success">user.jsp</result>
+        </action>
+        <action name="LogoutAction" class="cuongdn.actions.LogoutAction">
+            <result name="success" type="redirect">login.jsp</result>
+        </action>
+        <action name="CrudUserAction" class="cuongdn.actions.CrudUserAction">
+            <result name="success">crudUser.jsp</result>
+        </action>
+        <action name="DetailUserAction" class="cuongdn.actions.DetailUserAction">
+            <result name="success">updateUser.jsp</result>
+        </action>
+        <action name="DetailRoomAction" class="cuongdn.actions.DetailRoomAction">
+            <result name="success">updateRoom.jsp</result>
+        </action>
+        <action name="UpdateUserAction" class="cuongdn.actions.UpdateUserAction">
+            <result name="success">updateSuccess.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+        <action name="DeleteUserAction" class="cuongdn.actions.DeleteUserAction">
+            <result name="success">crudUser.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+        <action name="CreateUserAction" class="cuongdn.actions.CreateUserAction">
+            <result name="success">crudUser.jsp</result>
+            <result name="fail">createUser.jsp</result>
+        </action>
+        <action name="CrudDeviceAction" class="cuongdn.actions.CrudDeviceAction">
+            <result name="success">crudDevice.jsp</result>
+        </action>
+        <action name="CrudRoomAction" class="cuongdn.actions.CrudRoomAction">
+            <result name="success">crudRoom.jsp</result>
+        </action>
+        <action name="DetailDeviceAction" class="cuongdn.actions.DetailDeviceAction">
+            <result name="success">updateDevice.jsp</result>
+        </action>
+        <action name="UpdateDeviceAction" class="cuongdn.actions.UpdateDeviceAction">
+            <result name="success">updateDeviceSuccess.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+        <action name="UpdateRoomAction" class="cuongdn.actions.UpdateRoomAction">
+            <result name="success">updateRoomSuccess.jsp</result>
+            <result name="fail">error.jsp</result>
+            
+        </action>
+        <action name="DeleteDeviceAction" class="cuongdn.actions.DeleteDeviceAction">
+            <result name="success">crudDevice.jsp</result>
+            <result name="fail">error.jsp</result>
+        </action>
+        <action name="DeleteRoomAction" class="cuongdn.actions.DeleteRoomAction">
+            <result name="success">crudRoom.jsp</result>
+            <result name="fail">error.jsp</result>
+            <result name="constrain">constrainRoom.jsp</result>
+        </action>
+        <action name="CreateDeviceAction" class="cuongdn.actions.CreateDeviceAction">
+            <result name="success">crudDevice.jsp</result>
+            <result name="fail">createDevice.jsp</result>
+        </action>
+        <action name="CreateRoomAction" class="cuongdn.actions.CreateRoomAction">
+            <result name="success">crudRoom.jsp</result>
+            <result name="fail">createRoom.jsp</result>
+        </action>
+        <action name="PositionAdminAction" class="cuongdn.actions.PositionAdminAction">
+            <result name="success">detailAdminPosition.jsp</result>
+        </action>
+        <action name="FixHistoryAction" class="cuongdn.actions.FixHistoryAction">
+            <result name="success">fixingHistory.jsp</result>
+        </action>
+        <action name="FixingAction" class="cuongdn.actions.FixingAction">
+            <result name="success">staff.jsp</result>
+        </action>
+    </package>
+</struts>
